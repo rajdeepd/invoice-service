@@ -52,7 +52,7 @@ public class InvoiceEndpoint {
 				//Invoice inv = invoicesRepository.findInvoice(projectId);
 				Invoice inv = invoicesRepository.findInvoice(projectId);
 				if(inv == null){
-					response.setStatus("created");
+					response.setStatus("ok");
 					Invoice invoiceNew = new Invoice();
 					invoiceNew.invoiceId = UUID.randomUUID().toString();
 					invoiceNew.billAmount = project.getBillAmount();
@@ -67,7 +67,7 @@ public class InvoiceEndpoint {
 					invoiceNew.billDate = invoiceOld.billDate;
 					invoiceNew.projectId = projectId;
 					invoicesRepository.updateInvoice(invoiceNew);
-					response.setStatus("updated");
+					response.setStatus("ok");
 				}
 
 			}else {
