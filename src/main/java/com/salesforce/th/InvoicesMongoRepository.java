@@ -62,7 +62,6 @@ public class InvoicesMongoRepository {
 
 	}
 
-
 	public String addInvoice(Invoice invoice){
 		if(!initialized) {
 			init();
