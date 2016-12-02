@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="project" type="{http://salesforce.com/th/invoice-web-service}project"/>
+ *         &lt;element name="country" type="{http://salesforce.com/th/invoice-web-service}country"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "project"
+    "country"
 })
-@XmlRootElement(name = "billProjectRequest")
-public class BillProjectRequest {
+@XmlRootElement(name = "getCountryResponse")
+public class GetCountryResponse {
 
     @XmlElement(required = true)
-    protected Project project;
+    protected Country country;
 
     /**
-     * Gets the value of the project property.
+     * Gets the value of the country property.
      * 
      * @return
      *     possible object is
-     *     {@link Project }
+     *     {@link Country }
      *     
      */
-    public Project getProject() {
-        return project;
+    public Country getCountry() {
+        return country;
     }
 
     /**
-     * Sets the value of the project property.
+     * Sets the value of the country property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Project }
+     *     {@link Country }
      *     
      */
-    public void setProject(Project value) {
-        this.project = value;
+    public void setCountry(Country value) {
+        this.country = value;
     }
 
 }

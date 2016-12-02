@@ -115,19 +115,6 @@ public class InvoicesRepository {
 		}
 	}
 
-	/*public Invoice findInvoice(String invoiceId) {
-		Assert.notNull(invoiceId);
-
-		Invoice result = null;
-
-		for (Invoice inv : invoices) {
-			if (invoiceId.equals(inv.invoiceId)) {
-				result = inv;
-			}
-		}
-
-		return result;
-	}*/
 
 	public Invoice findInvoice(String projectId) {
 		//Assert.notNull(projectId);

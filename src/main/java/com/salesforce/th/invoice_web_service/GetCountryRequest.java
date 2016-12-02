@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="project" type="{http://salesforce.com/th/invoice-web-service}project"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "project"
+    "name"
 })
-@XmlRootElement(name = "billProjectRequest")
-public class BillProjectRequest {
+@XmlRootElement(name = "getCountryRequest")
+public class GetCountryRequest {
 
     @XmlElement(required = true)
-    protected Project project;
+    protected String name;
 
     /**
-     * Gets the value of the project property.
+     * Gets the value of the name property.
      * 
      * @return
      *     possible object is
-     *     {@link Project }
+     *     {@link String }
      *     
      */
-    public Project getProject() {
-        return project;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets the value of the project property.
+     * Sets the value of the name property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Project }
+     *     {@link String }
      *     
      */
-    public void setProject(Project value) {
-        this.project = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
 }

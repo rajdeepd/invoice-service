@@ -1,0 +1,17 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://salesforce.com/th/invoice-web-service">
+
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:billProjectRequest>
+         <gs:project>
+		<gs:username>bsUser1</gs:username>
+		<gs:password>bsPass1</gs:password>
+		<gs:projectid>1234567</gs:projectid>
+		<gs:billAmount>2000</gs:billAmount>
+	</gs:project>
+      </gs:billProjectRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+

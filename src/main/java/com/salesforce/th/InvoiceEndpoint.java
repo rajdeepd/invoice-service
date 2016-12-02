@@ -18,10 +18,17 @@ import java.util.UUID;
 public class InvoiceEndpoint {
 	private static final String NAMESPACE_URI = "http://salesforce.com/th/invoice-web-service";
 
-	private InvoicesRepository invoicesRepository;
+
+	//private InvoicesRepository invoicesRepository;
+	private InvoicesMongoRepository invoicesRepository;
+
+	//@Autowired
+	//public InvoiceEndpoint(InvoicesRepository invoicesRepository) {
+	//	this.invoicesRepository = invoicesRepository;
+	//}
 
 	@Autowired
-	public InvoiceEndpoint(InvoicesRepository invoicesRepository) {
+	public InvoiceEndpoint(InvoicesMongoRepository invoicesRepository) {
 		this.invoicesRepository = invoicesRepository;
 	}
 
@@ -42,6 +49,7 @@ public class InvoiceEndpoint {
 		}else {
 			if(project.getUsername().equals("bsUser1") && project.getPassword().equals("bsPass1")){
 				String projectId = project.getProjectid();
+				//Invoice inv = invoicesRepository.findInvoice(projectId);
 				Invoice inv = invoicesRepository.findInvoice(projectId);
 				if(inv == null){
 					response.setStatus("created");
