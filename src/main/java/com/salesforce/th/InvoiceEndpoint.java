@@ -18,14 +18,7 @@ import java.util.UUID;
 public class InvoiceEndpoint {
 	private static final String NAMESPACE_URI = "http://salesforce.com/th/invoice-web-service";
 
-
-	//private InvoicesRepository invoicesRepository;
 	private InvoicesMongoRepository invoicesRepository;
-
-	//@Autowired
-	//public InvoiceEndpoint(InvoicesRepository invoicesRepository) {
-	//	this.invoicesRepository = invoicesRepository;
-	//}
 
 	@Autowired
 	public InvoiceEndpoint(InvoicesMongoRepository invoicesRepository) {
